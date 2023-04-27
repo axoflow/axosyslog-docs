@@ -1,5 +1,5 @@
 
-title = "Axosyslog documentation"
+title = "AxoSyslog documentation"
 
 theme = ["docsy"]
 
@@ -18,7 +18,7 @@ enableGitInfo = true
 
 [languages]
 [languages.en]
-title = "Axosyslog documentation"
+title = "AxoSyslog documentation"
 description = "Documentation for the syslog-related projects of Axoflow"
 languageName ="English"
 # Weight used for sorting.
@@ -52,8 +52,8 @@ twitter = "AxoFlowIO"
   relativeURLs = true
 
   # Add project name to the header
-  project_name = "Axosyslog"
-  product_name = "Axosyslog"
+  project_name = "AxoSyslog"
+  product_name = "AxoSyslog"
 
   ###############################################################################
   # Docsy-theme specific config customizations
