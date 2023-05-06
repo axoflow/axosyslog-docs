@@ -1,21 +1,10 @@
 ---
-title: Cloud-ready syslog-ng images
-linktitle: syslog-ng images
+title: Install AxoSyslog with Docker
+linktitle: Docker
 weight: 100
 ---
 
-We provide [cloud-ready syslog-ng images](https://github.com/axoflow/axosyslog-docker/). Our images are different from the [upstream syslog-ng images](https://hub.docker.com/r/balabit/syslog-ng/) in a number of ways:
-
-- They are based on Alpine Linux, instead of Debian testing for reliability and smaller size (thus smaller attack surface).
-- They incorporate cloud-native features and settings (such as the Kubernetes source).
-- They incorporate container-level optimizations (like the use of an alternative malloc library) for better performance and improved security.
-- They support the ARM architecture.
-
-Our images are available for the following architectures:
-
-- amd64
-- arm/v7
-- arm64
+{{< include-headless "cloud-ready-images.md" >}}
 
 ## Install the syslog-ng images by Axoflow
 
