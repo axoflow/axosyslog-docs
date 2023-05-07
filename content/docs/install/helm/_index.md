@@ -12,17 +12,49 @@ You must have [Helm 3.0 or newer](https://helm.sh) installed to use these charts
 
 ## Install
 
-To install the charts, run the following commands:
+To install the `axosyslog-collector` charts, complete the following steps.
 
-```bash
-git clone git@github.com:axoflow/axosyslog-charts.git
-cd axosyslog-charts
-helm install --generate-name charts/axosyslog-collector
-```
+1. Clone the chart repository.
 
-> **Tip**: List all installed releases using `helm list`.
+    ```bash
+    git clone git@github.com:axoflow/axosyslog-charts.git
+    cd axosyslog-charts
+    ```
+
+1. Install the chart. The following command installs `axosyslog-collector` into the `default` namespace.
+
+    ```bash
+    helm install --generate-name charts/axosyslog-collector
+    ```
+
+    ```bash
+    NAME: axosyslog-collector-1683469360
+    LAST DEPLOYED: Sun May  7 16:22:40 2023
+    NAMESPACE: default
+    STATUS: deployed
+    REVISION: 1
+    TEST SUITE: None
+    NOTES:
+    1. Watch the axosyslog-collector-1683469360 container start.
+      $ kubectl get pods --namespace=default -l app=axosyslog-collector-1683469360 -w
+    ```
+
+1. Check that the pod is running.
+
+    ```bash
+    kubectl get pods
+    ```
+
+    The output should look like:
+
+    ```bash
+    NAME                                   READY   STATUS    RESTARTS   AGE
+    axosyslog-collector-1683469360-tptfb   1/1     Running   0          28s
+    ```
 
 ## Uninstall
+
+> **Tip**: List all installed releases using `helm list`.
 
 To uninstall a chart release, run:
 
