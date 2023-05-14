@@ -179,6 +179,11 @@ twitter = "AxoFlowIO"
     weight = -100
     #pre = "<i class='fas fa-book pr-2'></i>"
     url = "/docs/"
+  [[menu.main]]
+    name = "Contact"
+    weight = 100
+    #pre = "<i class='fas fa-book pr-2'></i>"
+    url = "https://axoflow.com/contact/"
 
 ###############################################################################
 # Misc customizations
