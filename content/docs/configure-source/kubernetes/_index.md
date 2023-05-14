@@ -20,7 +20,7 @@ source s_kubernetes {
 
 ## Kubernetes metadata
 
-Syslog-ng 4.1.1 retrieves the following metadata fields.
+Syslog-ng {{< param "version" >}} retrieves the following metadata fields.
 
 | syslog-ng name-value pair | source |
 |---------------------------|--------|
