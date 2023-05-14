@@ -21,7 +21,7 @@ To install the `axosyslog-collector` charts, complete the following steps.
     cd axosyslog-charts
     ```
 
-1. Install the chart. The following command installs `axosyslog-collector` into the `default` namespace.
+1. Install the chart. The following command installs `axosyslog-collector` into the `default` namespace. For the list of configurable parameters and their default values, see {{% xref "/docs/install/helm/helm-chart-parameters.md" %}}.
 
     ```bash
     helm install --generate-name charts/axosyslog-collector
