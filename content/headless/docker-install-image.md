@@ -20,7 +20,7 @@ If you want to test a development version, you can use the nightly builds:
 {{< param "command" >}} pull ghcr.io/axoflow/axosyslog:nightly
 ```
 
-> Note: These named packages are automatically updated when a new syslog-ng package is released. To install a specific version, run `docker pull ghcr.io/axoflow/syslog-ng:<version-number>`, for example:
+> Note: These named packages are automatically updated when a new syslog-ng package is released. To install a specific version, run `{{< param "command" >}} pull ghcr.io/axoflow/axosyslog:<version-number>`, for example:
 >
 > ```shell
 > {{< param "command" >}} pull ghcr.io/axoflow/axosyslog:{{< param "version" >}}
