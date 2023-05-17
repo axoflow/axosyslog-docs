@@ -18,7 +18,7 @@ The `splunk-hec-event()` destination feeds Splunk via the [HEC events API](https
 
 Minimal configuration:
 
-```c
+```sh
 destination d_splunk_hec_event {
   splunk-hec-event(
     url("https://localhost:8088")
@@ -29,7 +29,7 @@ destination d_splunk_hec_event {
 
 Additional options include:
 
-```c
+```sh
 event()
 index()
 source()
@@ -62,7 +62,7 @@ The `splunk-hec-raw()` destination feeds Splunk via the [HEC raw API](https://do
 
 Minimal configuration:
 
-```c
+```sh
 destination d_splunk_hec_raw {
   splunk-hec-raw(
     url("https://localhost:8088")
