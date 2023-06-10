@@ -3,7 +3,7 @@ title: syslog-ng kubernetes() source
 linktitle: Kubernetes
 ---
 
-The `kubernetes()` source collects logs from the Kubernetes cluster where syslog-ng is running. It reads container logs, for example, from the `/var/log/containers` or `/var/log/pods` files, and enriches them with various metadata retrieved from the Kubernetes API.
+The `kubernetes()` source collects logs from the Kubernetes cluster where syslog-ng is running. It reads plain-text and JSON-formatted container logs (as described in the [Container Runtime Interface (CRI) design proposal](https://github.com/kubernetes/design-proposals-archive/blob/main/node/kubelet-cri-logging.md)), for example, from the `/var/log/containers` or `/var/log/pods` files, and enriches them with various metadata retrieved from the Kubernetes API.
 
 ```c
 source s_kubernetes {
