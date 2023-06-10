@@ -7,7 +7,7 @@ title: AxoSyslog documentation
 	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/docs/" >}}">
 		Learn More <i class="fa-solid fa-circle-right ml-2"></i>
 	</a>
-	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="/docs/installing/">
+	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="/docs/install/">
 		Install <i class="fa-brands fa-github ml-2 "></i>
 	</a>
 </div>
