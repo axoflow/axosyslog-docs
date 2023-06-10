@@ -15,14 +15,52 @@ The OpenSearch service needs a large mmap count setting, so set it to at least 2
 sysctl -w vm.max_map_count=262144
 ```
 
+You must have [Helm](https://helm.sh) and [kubectl](https://kubernetes.io/docs/tasks/tools/) installed.
+
 ## Generate logs
 
-1. Install kube-logging/log-generator to generate logs. Run the following commands.
+Install kube-logging/log-generator to generate logs. Complete the following steps.
+
+1. Add the kube-logging repository to Helm.
 
     ```bash
     helm repo add kube-logging https://kube-logging.github.io/helm-charts
+    ```
+
+    Expected output:
+
+    ```bash
+    "kube-logging" has been added to your repositories
+    ```
+
+1. Update your repositories.
+
+    ```bash
     helm repo update
+    ```
+
+    The output should look like:
+
+    ```bash
+    Hang tight while we grab the latest from your chart repositories...
+    ...Successfully got an update from the "kube-logging" chart repository
+    Update Complete. ⎈Happy Helming!⎈
+
+1. Install kube-logging/log-generator.
+
+    ```bash
     helm install --generate-name --wait kube-logging/log-generator
+    ```
+
+    The output should look like:
+
+    ```bash
+    NAME: log-generator-1684694629
+    LAST DEPLOYED: Sun May 21 20:43:49 2023
+    NAMESPACE: default
+    STATUS: deployed
+    REVISION: 1
+    TEST SUITE: None
     ```
 
 1. Check that the log-generator is running:
@@ -44,9 +82,55 @@ sysctl -w vm.max_map_count=262144
 
     ```bash
     helm repo add opensearch https://opensearch-project.github.io/helm-charts/
+    ```
+
+    Expected output:
+
+    ```bash
+    "opensearch" has been added to your repositories
+    ```
+
+1. Update your repositories.
+
+    ```bash
     helm repo update
+    ```
+
+    The output should look like:
+
+    ```bash
+    Hang tight while we grab the latest from your chart repositories...
+    ...Successfully got an update from the "opensearch" chart repository
+    Update Complete. ⎈Happy Helming!⎈
+    ```
+
+1. Install OpenSearch. This step can take a few minutes.
+
+    ```bash
     helm install --generate-name --wait opensearch/opensearch
+    ```
+
+1. Install the OpenSearch dashboards.
+
+    ```bash
     helm install --generate-name --wait opensearch/opensearch-dashboards
+    ```
+
+    The output should look like:
+
+    ```bash
+    NAME: opensearch-dashboards-1684695728
+    LAST DEPLOYED: Sun May 21 21:02:09 2023
+    NAMESPACE: default
+    STATUS: deployed
+    REVISION: 1
+    TEST SUITE: None
+    NOTES:
+    1. Get the application URL by running these commands:
+      export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=opensearch-dashboards,app.kubernetes.io/instance=opensearch-dashboards-1684695728" -o jsonpath="{.items[0].metadata.name}")
+      export CONTAINER_PORT=$(kubectl get pod --namespace default $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+      echo "Visit http://127.0.0.1:8080 to use your application"
+      kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT
     ```
 
 1. Now you should have 5 pods. Check that they exist:
