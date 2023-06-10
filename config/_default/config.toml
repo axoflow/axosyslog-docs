@@ -18,7 +18,7 @@ enableGitInfo = true
 
 [languages]
 [languages.en]
-title = "AxoSyslog documentation"
+title = "AxoSyslog"
 description = "Documentation for the syslog-related projects of Axoflow"
 languageName ="English"
 # Weight used for sorting.
