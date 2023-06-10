@@ -69,3 +69,7 @@ Available options:
 - `log-level()`: logging level, possible values: `"DEBUG"`, `"INFO"`, `"WARNING"`, `"ERROR"`, `"CRITICAL"` (optional - defaults to `"INFO"`)
 - `flags()`: flags passed to the source, can be used for example to disable message parsing with `flags(no-parse)` (optional - defaults to empty)
 - `ignore-persistence()`: ignores the saved value in the persist file, and starts querying from the current time (optional - defaults to `no`)
+
+## Acknowledgements
+
+This documentation page is based on the README file of the `hypr-audit-trail()` source, written by Dan Elder.
