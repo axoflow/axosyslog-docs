@@ -92,15 +92,8 @@ sysctl -w vm.max_map_count=262144
 
 1. Create a YAML file (called `axoflow-demo.yaml` in the examples) to configure the collector.
 
-    <!-- FIXME replace 4.1 with parameter -->
     ```yaml
-    image:
-      # Use the nightly build of https://github.com/axoflow/axosyslog-docker
-      tag: nightly
-
-
     config:
-      version: "4.1"
       sources:
         kubernetes:
           # Collect kubernetes logs
@@ -133,15 +126,15 @@ sysctl -w vm.max_map_count=262144
     kind: ConfigMap
     metadata:
       labels:
-        helm.sh/chart: axosyslog-collector-0.1.0
+        helm.sh/chart: axosyslog-collector-0.3.0
         app.kubernetes.io/name: axosyslog-collector
         app.kubernetes.io/instance: release-name
-        app.kubernetes.io/version: "4.1.1"
+        app.kubernetes.io/version: "4.2.0"
         app.kubernetes.io/managed-by: Helm
       name: release-name-axosyslog-collector
     data:
       syslog-ng.conf: |
-        @version: 4.1
+        @version: current
         @include "scl.conf"
 
         options {

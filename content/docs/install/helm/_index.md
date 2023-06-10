@@ -26,14 +26,14 @@ To install the `axosyslog-collector` charts, complete the following steps.
 1. Clone the chart repository.
 
     ```bash
-    git clone git@github.com:axoflow/axosyslog-charts.git
-    cd axosyslog-charts
+    helm repo add axosyslog https://axoflow.github.io/axosyslog-charts
+    helm repo update
     ```
 
 1. Install the chart. The following command installs `axosyslog-collector` into the `default` namespace. For the list of configurable parameters and their default values, see {{% xref "/docs/install/helm/helm-chart-parameters.md" %}}.
 
     ```bash
-    helm install --generate-name charts/axosyslog-collector
+    helm install --generate-name axosyslog/axosyslog-collector
     ```
 
     ```bash
