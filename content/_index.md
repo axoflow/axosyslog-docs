@@ -2,7 +2,7 @@
 title: AxoSyslog documentation
 ---
 
-{{< blocks/cover title="Welcome to AxoSyslog, the syslog-ng distribution by Axoflow!" image_anchor="top" width="min" color="gray" >}}
+{{< blocks/cover title="AxoSyslog: the cloud-native syslog-ng distribution by Axoflow" image_anchor="top" width="min" color="gray" >}}
 <div class="mx-auto">
 	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/docs/" >}}">
 		Learn More <i class="fa-solid fa-circle-right ml-2"></i>
@@ -10,7 +10,6 @@ title: AxoSyslog documentation
 	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="/docs/installing/">
 		Install <i class="fa-brands fa-github ml-2 "></i>
 	</a>
-	<p class="lead mt-5">AxoSyslog is a cloud-native syslog-ng distribution, created by <a href="https://axoflow.com">Axoflow</a></p>
 </div>
 {{< /blocks/cover >}}
 
