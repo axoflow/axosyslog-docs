@@ -1,8 +1,8 @@
 ---
-title: Install AxoSyslog with Docker
-linktitle: Docker
+title: Install AxoSyslog with Podman
+linktitle: Podman
 weight: 100
-command: docker
+command: podman
 ---
 
 {{< include-headless "cloud-ready-images.md" >}}
