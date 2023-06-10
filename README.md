@@ -1,4 +1,4 @@
-# Axosyslog documentation
+# AxoSyslog documentation
 
 Documentation for the syslog-related projects of Axoflow, published at [https://axoflow.com/docs/axosyslog/](https://axoflow.com/docs/axosyslog/).
 

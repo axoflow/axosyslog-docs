@@ -1,8 +1,8 @@
 ---
-title: Axosyslog documentation
+title: AxoSyslog documentation
 ---
 
-The Axosyslog documentation provides documentation for the syslog-related projects of [Axoflow](https://axoflow.com), and also tips and tutorials about [syslog-ng](https://github.com/syslog-ng/syslog-ng).
+The AxoSyslog documentation provides documentation for the syslog-related projects of [Axoflow](https://axoflow.com), and also tips and tutorials about [syslog-ng](https://github.com/syslog-ng/syslog-ng).
 
 ## About Axoflow
 

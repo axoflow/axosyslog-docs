@@ -3,7 +3,7 @@ title: Support
 weight: 1000
 ---
 
-In case you need help with any of the Axosyslog projects, or directly with syslog-ng, you have several ways to contact us:
+In case you need help with any of the AxoSyslog projects, or directly with syslog-ng, you have several ways to contact us:
 
 - Open a GitHub issue in the relevant repository.
 - Chat with us in the [syslog-ng channel of the Axoflow Discord server](https://discord.gg/4Fzy7D66Qq).
