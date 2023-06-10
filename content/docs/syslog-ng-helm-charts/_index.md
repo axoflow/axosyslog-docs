@@ -3,7 +3,7 @@ title: syslog-ng Helm charts
 weight: 300
 ---
 
-We provide [Helm charts for syslog-ng](https://github.com/axoflow/syslog-ng-charts/). You can use these charts to install the [cloud-ready syslog-ng images](https://github.com/axoflow/syslog-ng-docker) created and maintained by [Axoflow](https://axoflow.com).
+We provide [Helm charts for syslog-ng](https://github.com/axoflow/axosyslog-charts/). You can use these charts to install the [cloud-ready syslog-ng images](https://github.com/axoflow/axosyslog-docker) created and maintained by [Axoflow](https://axoflow.com).
 
 ## Usage
 
@@ -12,8 +12,8 @@ We provide [Helm charts for syslog-ng](https://github.com/axoflow/syslog-ng-char
 You can install the charts by running the following commands:
 
 ```bash
-git clone git@github.com:axoflow/syslog-ng-charts.git
-cd syslog-ng-charts
+git clone git@github.com:axoflow/axosyslog-charts.git
+cd axosyslog-charts
 helm install --generate-name charts/syslog-ng-collector
 ```
 
@@ -27,4 +27,4 @@ helm delete <name-of-the-release-to-delete>
 
 ## Contribute
 
-If you have fixed a bug or would like to contribute your improvements to these charts, [open a pull request](https://github.com/axoflow/syslog-ng-charts/pulls). We truly appreciate your help.
+If you have fixed a bug or would like to contribute your improvements to these charts, [open a pull request](https://github.com/axoflow/axosyslog-charts/pulls). We truly appreciate your help.

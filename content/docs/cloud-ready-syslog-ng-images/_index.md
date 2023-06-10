@@ -4,7 +4,7 @@ linktitle: syslog-ng images
 weight: 100
 ---
 
-We provide [cloud-ready syslog-ng images](https://github.com/axoflow/syslog-ng-docker/). Our images are different from the [upstream syslog-ng images](https://hub.docker.com/r/balabit/syslog-ng/) in a number of ways:
+We provide [cloud-ready syslog-ng images](https://github.com/axoflow/axosyslog-docker/). Our images are different from the [upstream syslog-ng images](https://hub.docker.com/r/balabit/syslog-ng/) in a number of ways:
 
 - They are based on Alpine Linux, instead of Debian testing for reliability and smaller size (thus smaller attack surface).
 - They incorporate cloud-native features and settings (such as the Kubernetes source).
@@ -19,7 +19,7 @@ Our images are available for the following architectures:
 
 ## Install the syslog-ng images by Axoflow
 
-You can find the list of tagged versions at [https://github.com/axoflow/syslog-ng-docker/pkgs/container/syslog-ng](https://github.com/axoflow/syslog-ng-docker/pkgs/container/syslog-ng).
+You can find the list of tagged versions at [https://github.com/axoflow/axosyslog-docker/pkgs/container/syslog-ng](https://github.com/axoflow/axosyslog-docker/pkgs/container/syslog-ng).
 
 To install the latest stable version, run:
 
@@ -47,4 +47,4 @@ docker pull ghcr.io/axoflow/syslog-ng:nightly
 
 ## Contribute
 
-If you have fixed a bug or would like to contribute your improvements to these images, [open a pull request](https://github.com/axoflow/syslog-ng-docker/pulls). We truly appreciate your help.
+If you have fixed a bug or would like to contribute your improvements to these images, [open a pull request](https://github.com/axoflow/axosyslog-docker/pulls). We truly appreciate your help.

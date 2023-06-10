@@ -23,8 +23,8 @@ AxoSyslog is a collection of open source syslog-related projects including docke
 Read the AxoSyslog documentation.
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-brands fa-github" title="Contributions welcome!" url="https://github.com/axoflow/syslog-ng-docker" %}}
-We do a [Pull Request](https://github.com/axoflow/syslog-ng-docker/pulls) contributions workflow on **GitHub**. New users and developers are always welcome!
+{{% blocks/feature icon="fa-brands fa-github" title="Contributions welcome!" url="https://github.com/axoflow/axosyslog-docker" %}}
+We do a [Pull Request](https://github.com/axoflow/axosyslog-docker/pulls) contributions workflow on **GitHub**. New users and developers are always welcome!
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-brands fa-discord" title="Need help? Come chat with us!" url="https://discord.gg/4Fzy7D66Qq" url_text="Join Discord" %}}
