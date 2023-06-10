@@ -19,3 +19,19 @@
 
 # Go workspace file
 go.work
+
+# Hugo files
+
+.DS_Store
+.idea
+.vscode
+resources/
+public/
+tmp/
+bin/
+scripts/__pycache__/
+node_modules/
+*.swp
+*~
+todo.md
+.hugo_build.lock
