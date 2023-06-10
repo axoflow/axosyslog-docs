@@ -49,7 +49,7 @@ content-type()
 
 `index()`, `source()`, `host()`, and `time()` accept templates, and declare the respective field of each log message based on the set template.
 
-`default-index()`, `default-source()`, and `default-sourcetype()` accept literal strings, and are used as fallback values if a log message does not set these fields. These values are passed to the URL as query parameters, so they don't inflate the body of the HTTP request
+`default-index()`, `default-source()`, and `default-sourcetype()` accept literal strings, and are used as fallback values if a log message doesn't set these fields. These values are passed to the URL as query parameters, so they don't inflate the body of the HTTP request
 for each message in the batch, which saves bandwidth.
 
 `fields()` accepts template, which is passed as additional indexing metadata to Splunk.
@@ -72,6 +72,6 @@ destination d_splunk_hec_raw {
 };
 ```
 
-The options of the `splunk-hec-raw()` destination are similar to the `splunk-hec-event()` destination, but it has a mandatory `channel()` option, which accepts a GUID as a literal string that differentiates the data from different clients.
+The options of the `splunk-hec-raw()` destination are similar to the `splunk-hec-event()` destination, but it has a mandatory option: `channel()`. The `channel()` option must be a [globally unique channel identifier (GUID)](https://docs.splunk.com/Documentation/Splunk/9.0.4/Data/FormateventsforHTTPEventCollector#Channel_identifier_header), this ID differentiates the data from different clients. Note that Splunk doesn't generate this ID, you must create it for yourself. When Splunk sees a new channel identifier, it creates a new channel.
 
-Also note that instead of `event()`, use the `template()` option to set the content of the log message sent to Splunk.
+Use the `template()` option to set the content of the log message sent to Splunk (and not the `event()` option that is used in the `splunk-hec-event()` destination).
