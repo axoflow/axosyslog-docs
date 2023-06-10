@@ -1,8 +1,13 @@
 ---
 title: AxoSyslog documentation
+weight: 100
 ---
 
-The AxoSyslog documentation provides documentation for the syslog-related projects of [Axoflow](https://axoflow.com), and also tips and tutorials about [syslog-ng](https://github.com/syslog-ng/syslog-ng).
+AxoSyslog is a cloud-native syslog-ng distribution, created by [Axoflow](https://axoflow.com). It also provides documentation for the syslog-related Axoflow projects, and also tips and tutorials about [syslog-ng](https://github.com/syslog-ng/syslog-ng).
+
+## Cloud-ready syslog-ng images {#images}
+
+{{< include-headless "cloud-ready-images.md" >}}
 
 ## About Axoflow
 
