@@ -6,6 +6,72 @@ weight: 100
 
 The following table lists the configurable parameters of the AxoSyslog collector chart and their default values. For details on installing the chart, see {{% xref "/docs/install/helm/_index.md" %}}.
 
+## Parameters for syslog-ng configuration
+
+| Parameter | Description | Default |
+| --------- | ----------- | ------- |
+|  config.raw  | A complete syslog-ng configuration. If this parameter is set, all other parameters in the *config* section are ignored |  ""  |
+|  config.version  | The version string specifies the syslog-ng version the configuration corresponds to. |  ""  |
+|  config.sources.kubernetes.enabled  | Collect pod logs using the [`kubernetes()`]({{< relref "/docs/configure-source/kubernetes/_index.md" >}}) source. If disabled, the chart doesn't configure any source. |  true  |
+
+### Network destination
+
+Send logs over the network, conforming to RFC3164 using the `network()` destination of syslog-ng.
+
+| Parameter | Description | Default |
+| --------- | ----------- | ------- |
+|  config.destination.network.address  | The IP address of the destination host. |  ""  |
+|  config.destination.network.transport  | The transport protocol to use. Possible values: `tcp`, `udp` |  ""  |
+|  config.destination.network.port  | The port number to send the messages to. |  ""  |
+|  config.destination.network.template  | A syslog-ng template to format the messages. |  ""  |
+
+For example:
+
+```yaml
+config:
+  destinations:
+    network:
+      - transport: tcp
+        address: localhost
+        port: 12345
+        template: "$(format-json .*)"
+```
+
+### OpenSearch destination
+
+Send logs to OpenSearch over HTTP or HTTPS.
+
+| Parameter | Description | Default |
+| --------- | ----------- | ------- |
+|  config.destination.opensearch.address  | The IP address of the OpenSearch server. |  ""  |
+|  config.destination.opensearch.index  | Name of the OpenSearch index that stores the messages. |  ""  |
+|  config.destination.opensearch.user  | The username to use for authentication on the OpenSearch server, if not authenticating with a certificate. |  ""  |
+|  config.destination.opensearch.password  | The password to use for authentication on the OpenSearch server. |  ""  |
+|  config.destination.opensearch.tls.CAFile  | The CA certificate in PEM format to use when verifying the certificate of the server. |  ""  |
+|  config.destination.opensearch.tls.CADir  | A directory containing a set of trusted CA certificates in PEM format. The name of the files must be the 32-bit hash of the subject's name. AxoSyslog collector verifies the certificate of the server using these CA certificates. |  ""  |
+|  config.destination.opensearch.tls.Cert  | Name of a file containing an X.509 certificate or a certificate chain in PEM format. AxoSyslog collector authenticates with this certificate on the server, with the private key set in the `config.destination.opensearch.tls.Key` field. If the file contains a certificate chain, the file must begin with the certificate of the host, followed by the CA certificate that signed the certificate of the host, and any other signing CAs in order. |  ""  |
+|  config.destination.opensearch.tls.Key  | Name of a file containing an unencrypted private key in PEM format. AxoSyslog collector authenticates with this key and the certificate set in the `config.destination.opensearch.tls.Cert` field. |  ""  |
+|  config.destination.opensearch.tls.peerVerify  | If true, AxoSyslog collector verifies the certificate of the server with the CA certificates set in `config.destination.opensearch.tls.CAFile` and `config.destination.opensearch.tls.CADir`. |  ""  |
+|  config.destination.opensearch.template  | A syslog-ng template to format the messages. |  ""  |
+
+For example:
+
+```yaml
+config:
+  destinations:
+    opensearch:
+      - address: 10.104.232.94
+        index: "test-axoflow-index"
+        tls:
+          CAFile: "/path/to/CAFile.pem"
+          CADir: "/path/to/CADir/"
+          Cert: "/path/to/Cert.pem"
+          Key: "/path/to/Key.pem"
+          peerVerify: true
+          template: "$(format-json .*)"
+```
+
+## Generic parameters
 
 | Parameter | Description | Default |
 | --------- | ----------- | ------- |
