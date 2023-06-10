@@ -10,6 +10,15 @@ AxoSyslog provides [Helm charts for syslog-ng](https://github.com/axoflow/axosys
 
 You must have [Helm 3.0 or newer](https://helm.sh) installed to use these charts. Refer to the [official Helm documentation](https://helm.sh/docs/intro/install/) for details.
 
+## Limitations
+
+The chart provides parameters that make it easy to:
+
+- collect logs using the `kubernetes()` source, and
+- forward the logs using the `network()` and `opensearch()` destinations.
+
+To use other sources and destinations, use the `config.raw` parameter. For the list of configurable parameters and their default values, see {{% xref "/docs/install/helm/helm-chart-parameters.md" %}}.
+
 ## Install
 
 To install the `axosyslog-collector` charts, complete the following steps.
