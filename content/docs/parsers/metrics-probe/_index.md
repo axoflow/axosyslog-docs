@@ -139,7 +139,7 @@ syslogng_classified_events_total{app="example-app", host="localhost", program="b
 |          |         |
 | -------- | ------- |
 | Type:    | integer (0-3) |
-| Default: | <!-- FIXME --> |
+| Default: | 0 |
 
 Available in {{% param "product_name" %}} version 4.2 and newer.
 
