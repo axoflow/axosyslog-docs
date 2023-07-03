@@ -18,7 +18,7 @@ To start following those audit trails, you must restart syslog-ng is.
 
 Example minimal configuration:
 
-```c
+```shell
 source s_hypr {
     hypr-audit-trail(
         url('https://<custom domain>.hypr.com')
@@ -29,7 +29,7 @@ source s_hypr {
 
 A more detailed example:
 
-```c
+```shell
 source s_hypr {
     hypr-audit-trail(
         url('https://<custom domain>.hypr.com')
