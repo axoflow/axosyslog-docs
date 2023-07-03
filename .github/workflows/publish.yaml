@@ -56,5 +56,7 @@ jobs:
         uses: AnimMouse/setup-rclone@v1
         with:
           rclone_config: ${{ secrets.RCLONE_CONFIG }}
-          
-      - run: rclone copy --progress --stats-one-line public/ axodocs:/axosyslog
+
+      - run: |
+          rclone copy --progress --stats-one-line public/ axodocs:/axosyslog
+          rclone copy public/docs-main/index.html axodocs:/
