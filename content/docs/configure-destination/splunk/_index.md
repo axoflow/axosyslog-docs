@@ -3,12 +3,12 @@ title: Sending messages to Splunk HEC
 linktitle: Splunk HEC
 ---
 
-Starting with version 4.2.0, syslog-ng Open Source Edition can send messages to the Splunk HTTP Event Collector (HEC).
+Starting with version 4.2.0, {{% param "product_name" %}} can send messages to the Splunk HTTP Event Collector (HEC).
 
 ## Prerequisites
 
 - Enable the HTTP Event Collector (HEC) on your Splunk deployment.
-- Create a token for syslog-ng to use in the `token()` option of the destination. When creating the token, use the syslog source type.
+- Create a token for {{% param "product_name" %}} to use in the `token()` option of the destination. When creating the token, use the syslog source type.
 
 For details, see [Set up and use HTTP Event Collector in Splunk Web](https://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector).
 

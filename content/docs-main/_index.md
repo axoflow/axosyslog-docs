@@ -17,7 +17,7 @@ Read the AxoSyslog Core documentation.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-cloud" title="AxoSyslog version 4.1 and newer" url="https://axoflow.com/docs/axosyslog/" %}}
-AxoSyslog is a collection of open source syslog-related projects including docker images, Helm charts, tutorials and documentation, that help you run syslog-ng effectively in a containerized, cloud-native environment.
+AxoSyslog is a collection of open source syslog-related projects including docker images, Helm charts, tutorials and documentation, that help you run `syslog-ng` effectively in a containerized, cloud-native environment.
 {{% /blocks/feature %}}
 
 {{< /blocks/section >}}

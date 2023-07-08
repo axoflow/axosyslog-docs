@@ -1,6 +1,6 @@
 ---
 ---
-AxoSyslog provides [cloud-ready syslog-ng images](https://github.com/axoflow/axosyslog-docker/). These images differ from the [upstream syslog-ng images](https://hub.docker.com/r/balabit/syslog-ng/), because:
+AxoSyslog provides [cloud-ready `syslog-ng` images](https://github.com/axoflow/axosyslog-docker/). These images differ from the [upstream syslog-ng images](https://hub.docker.com/r/balabit/syslog-ng/), because:
 
 - They're based on Alpine Linux, instead of Debian testing for reliability and smaller size (thus smaller attack surface).
 - They incorporate cloud-native features and settings, such as the Kubernetes source.

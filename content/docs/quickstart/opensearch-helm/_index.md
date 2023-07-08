@@ -163,7 +163,7 @@ Install kube-logging/log-generator to generate logs. Complete the following step
     Forwarding from [::1]:8080 -> 5601
     ```
 
-1. Log in to the dashboard at `http://localhost:8080` with admin/admin. You will soon create an Index Pattern here, but first you have to send some logs from syslog-ng.
+1. Log in to the dashboard at `http://localhost:8080` with admin/admin. You will soon create an Index Pattern here, but first you have to send some logs from `syslog-ng`.
 
 ## Set up axosyslog-collector
 
@@ -196,7 +196,7 @@ Install kube-logging/log-generator to generate logs. Complete the following step
             template: "$(format-json --scope rfc5424 --exclude DATE --key ISODATE @timestamp=${ISODATE} k8s=$(format-json .k8s.* --shift-levels 2 --exclude .k8s.log))"
     ```
 
-1. Check how the syslog-ng.conf file looks with your custom values:
+1. Check how the `syslog-ng.conf` file looks with your custom values:
 
     ```bash
     helm template -f axoflow-demo.yaml -s templates/config.yaml axosyslog/axosyslog-collector

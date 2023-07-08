@@ -1,9 +1,9 @@
 ---
-title: syslog-ng kubernetes() source
+title: kubernetes() source
 linktitle: Kubernetes
 ---
 
-The `kubernetes()` source collects logs from the Kubernetes cluster where syslog-ng is running. It reads plain-text and JSON-formatted container logs (as described in the [Container Runtime Interface (CRI) design proposal](https://github.com/kubernetes/design-proposals-archive/blob/main/node/kubelet-cri-logging.md)), for example, from the `/var/log/containers` or `/var/log/pods` files, and enriches them with various metadata retrieved from the Kubernetes API.
+The `kubernetes()` source collects logs from the Kubernetes cluster where {{% param "product_name" %}} is running. It reads plain-text and JSON-formatted container logs (as described in the [Container Runtime Interface (CRI) design proposal](https://github.com/kubernetes/design-proposals-archive/blob/main/node/kubelet-cri-logging.md)), for example, from the `/var/log/containers` or `/var/log/pods` files, and enriches them with various metadata retrieved from the Kubernetes API.
 
 ```shell
 source s_kubernetes {
@@ -20,9 +20,9 @@ source s_kubernetes {
 
 ## Kubernetes metadata
 
-Syslog-ng {{< param "version" >}} retrieves the following metadata fields.
+{{% param "product_name" %}} {{< param "version" >}} retrieves the following metadata fields.
 
-| syslog-ng name-value pair | source |
+| `syslog-ng` name-value pair | source |
 |---------------------------|--------|
 | .k8s.namespace_name | Container log file name.|
 | .k8s.pod_name | Container log file name.|

@@ -14,7 +14,9 @@ title: AxoSyslog documentation
 {{< /blocks/cover >}}
 
 {{% blocks/lead color="primary" %}}
-AxoSyslog is a collection of open source syslog-related projects including docker images, Helm charts, tutorials and documentation, that help you run syslog-ng effectively in a containerized, cloud-native environment. AxoSyslog is developed by [Axoflow](https://axoflow.com), a company founded by the from the creators of <a href="https://github.com/syslog-ng/syslog-ng/">syslog-ng</a> and the <a href="https://kube-logging.github.io">kubernetes logging-operator</a>
+<div class="lead-text">
+AxoSyslog is a collection of open source syslog-related projects including docker images, Helm charts, tutorials and documentation, that help you run <code>syslog-ng</code> effectively in a containerized, cloud-native environment. AxoSyslog is developed by <a href="https://axoflow.com">Axoflow</a>, a company founded by the from the creators of <a href="https://github.com/syslog-ng/syslog-ng/">syslog-ng</a> and the <a href="https://kube-logging.github.io">Kubernetes logging-operator</a>
+</div>
 {{% /blocks/lead %}}
 
 {{< blocks/section color="dark" type="features">}}

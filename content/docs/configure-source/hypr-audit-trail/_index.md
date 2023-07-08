@@ -3,7 +3,7 @@ title: Hypr Audit Trail and Hypr App Audit Trail
 linktitle: Hypr
 ---
 
-Starting with version 4.2.0, syslog-ng Open Source Edition can fetch events from the [Hypr REST API](https://apidocs.hypr.com/) using the `hypr-audit-trail()` and `hypr-app-audit-trail()` source drivers.
+Starting with version 4.2.0, {{% param "product_name" %}} can fetch events from the [Hypr REST API](https://apidocs.hypr.com/) using the `hypr-audit-trail()` and `hypr-app-audit-trail()` source drivers.
 
 - `hypr-audit-trail()`: is a source driver that pulls messages from the Hypr API, associated to any RP Application ID.
 - `hypr-app-audit-trail()`: is a source driver that pulls messages from the Hypr API, but only those associated to a specific RP Application ID.
@@ -12,9 +12,9 @@ Starting with version 4.2.0, syslog-ng Open Source Edition can fetch events from
 
 The `hypr-audit-trail()` source queries the Hypr API for the list of potential applications at startup, then monitors the audit trail for each of the detected applications.
 
-> Note: Applications that are registered after syslog-ng is started are not recognized.
+> Note: Applications that are registered after `syslog-ng` is started are not recognized.
 
-To start following those audit trails, you must restart syslog-ng is.
+To start following those audit trails, you must restart `syslog-ng`.
 
 Example minimal configuration:
 

@@ -1,4 +1,4 @@
-## Install the syslog-ng images by Axoflow
+## Install the {{% param "product_name" %}} images {#install-axosyslog-images}
 
 You can find the list of tagged versions at [https://github.com/axoflow/axosyslog-docker/pkgs/container/axosyslog](https://github.com/axoflow/axosyslog-docker/pkgs/container/axosyslog).
 
@@ -20,15 +20,15 @@ If you want to test a development version, you can use the nightly builds:
 {{< param "command" >}} pull ghcr.io/axoflow/axosyslog:nightly
 ```
 
-> Note: These named packages are automatically updated when a new syslog-ng package is released. To install a specific version, run `{{< param "command" >}} pull ghcr.io/axoflow/axosyslog:<version-number>`, for example:
+> Note: These named packages are automatically updated when a new package is released. To install a specific version, run `{{< param "command" >}} pull ghcr.io/axoflow/axosyslog:<version-number>`, for example:
 >
 > ```shell
 > {{< param "command" >}} pull ghcr.io/axoflow/axosyslog:{{< param "version" >}}
 > ```
 
-## Customize the syslog-ng configuration
+## Customize the configuration
 
-The AxoSyslog container image stores the syslog-ng configuration file at `/etc/syslog-ng/syslog-ng.conf`. By default, collects the local system logs and logs received from the network into the `/var/log/messages` and `/var/log/messages-kv.log` files using the following configuration: https://github.com/syslog-ng/syslog-ng/blob/master/scl/syslog-ng.conf
+The {{% param "product_name" %}} container image stores the configuration file at `/etc/syslog-ng/syslog-ng.conf`. By default, {{% param "product_name" %}} collects the local system logs and logs received from the network into the `/var/log/messages` and `/var/log/messages-kv.log` files using [this configuration file from the syslog-ng repository](https://github.com/syslog-ng/syslog-ng/blob/master/scl/syslog-ng.conf).
 
 To customize the configuration, create your own configuration file and override the file in the container image with it, for example:
 

@@ -3,4 +3,4 @@ title: Configure sources
 weight: 500
 ---
 
-The following sections show you how to configure cloud-related syslog-ng sources.
+The following sections show you how to configure cloud-related sources in {{% param "product_name" %}}.
