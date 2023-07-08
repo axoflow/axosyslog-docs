@@ -1,7 +1,7 @@
 
 title = "AxoSyslog documentation"
 
-theme = ["docsy"]
+theme = ['docsy-axoflow', 'docsy']
 
 baseurl = "/"
 
@@ -45,25 +45,11 @@ twitter = "AxoFlowIO"
 
 [params]
 
-  email = "mailto:sales@axoflow.com"
-
-  copyright = "Axoflow Zrt."
-
-  relativeURLs = true
-
   # Add project name to the header
   project_name = "AxoSyslog"
   product_name = "AxoSyslog"
 
   hubspotId = "39677057"
-  ###############################################################################
-  # Docsy-theme specific config customizations
-  ###############################################################################
-
-  # Flag used in the "version-banner" partial to decide whether to display a 
-  # banner on every page indicating that this is an archived version of the docs.
-  # Set this flag to "true" if you want to display the banner.
-  archived_version = false
 
   # The version number for the version of the docs represented in this doc set.
   # Used in the "version-banner" partial to display a version number for the 
@@ -86,41 +72,6 @@ twitter = "AxoFlowIO"
   # Uncomment this if your GitHub repo does not have "main" as the default branch,
   # or specify a new value if you want to reference another branch in your GitHub links
   # github_branch= "master"
-
-
-  # Enable Lunr.js offline search
-  offlineSearch = true
-
-  #####
-  # Code highlighting
-  #####
-  # Highlighting config
-  pygmentsCodeFences = true
-  pygmentsUseClasses = false
-  # Use the new Chroma Go highlighter in Hugo.
-  pygmentsUseClassic = false
-  #pygmentsOptions = "linenos=table"
-  # See https://help.farbox.com/pygments.html
-  pygmentsStyle = "coy"
-  # Enable syntax highlighting and copy buttons on code blocks with Prism
-  prism_syntax_highlighting = true
-
-  # User interface configuration
-  [params.ui]
-  #  Set to true to disable breadcrumb navigation.
-  breadcrumb_disable = false
-  # Set to true to disable the About link in the site footer
-  footer_about_disable = false
-  # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
-  navbar_logo = true
-  # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
-  navbar_translucent_over_cover_disable = false
-  # Enable to show the side bar menu in its compact state.
-  #sidebar_menu_compact = false
-  # Enable to make the side bar menu foldable.
-  sidebar_menu_foldable = true
-  # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
-  sidebar_search_disable = false
 
   [params.links]
   # End user relevant links. These will show up on left side of footer and in the community page if you have one.
@@ -145,16 +96,6 @@ twitter = "AxoFlowIO"
     url = "https://github.com/axoflow/axosyslog-docker"
     icon = "fab fa-github"
     desc = "Get involved with Logging operator development"
-  #[[params.links.developer]]
-  #  name = "Slack"
-  #  url = "https://banzaicloud.com/invite-slack/"
-  #  icon = "fab fa-slack"
-  #  desc = "Chat with the project developers"
-  #[[params.links.developer]]
-  #  name = "Developer mailing list"
-  #  url = "https://example.org/mail"
-  #  icon = "fa fa-envelope"
-  #  desc = "Discuss development issues around the project"
 
 ###############################################################################
 # Hugo - Top-level navigation (horizontal)
@@ -189,28 +130,6 @@ twitter = "AxoFlowIO"
 ###############################################################################
 # Misc customizations
 ###############################################################################
-
-enableRobotsTXT = false
-
-enableGitInfo = true
-
-# Image processing configuration.
-[imaging]
-resampleFilter = "CatmullRom"
-quality = 75
-anchor = "smart"
-
-[minify]
-  minifyOutput = true
-  disableJSON = true
-  [minify.tdewolff]
-    [minify.tdewolff.html]
-    keepQuotes = true
-    keepWhitespace = true
-
-[sitemap]
-  ChangeFreq = "daily"
-  Priority = "1"
 
 [security]
   [security.funcs]
