@@ -34,3 +34,5 @@ source s_kubernetes {
 | .k8s.docker_id | python kubernetes.client.CoreV1Api.|
 | .k8s.labels.* | python kubernetes.client.CoreV1Api.|
 | .k8s.annotations.* | python kubernetes.client.CoreV1Api.|
+
+{{< include-headless "disk-buffer-in-container.md" >}}

@@ -71,6 +71,8 @@ To uninstall a chart release, run:
 helm delete <name-of-the-release-to-delete>
 ```
 
+{{< include-headless "disk-buffer-in-container.md" >}}
+
 ## Contribute
 
 If you have fixed a bug or would like to contribute your improvements to these charts, [open a pull request](https://github.com/axoflow/axosyslog-charts/pulls). We truly appreciate your help.

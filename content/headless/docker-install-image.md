@@ -36,6 +36,8 @@ To customize the configuration, create your own configuration file and override 
 {{< param "command" >}} run --rm --volume <path-to-your/syslog-ng.conf>:/etc/syslog-ng/syslog-ng.conf ghcr.io/axoflow/axosyslog:latest
 ```
 
+{{< include-headless "disk-buffer-in-container.md" >}}
+
 ## Contribute
 
 If you have fixed a bug or would like to contribute your improvements to these images, [open a pull request](https://github.com/axoflow/axosyslog-docker/pulls). We truly appreciate your help.
