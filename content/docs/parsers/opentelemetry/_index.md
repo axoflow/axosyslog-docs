@@ -22,4 +22,4 @@ String, bool, int64, double, and bytes values are mapped to their respective {{%
 
 The mapping of AnyValue type fields is limited.
 
-`ArrayValue` and `KeyValueList` types are stored serialized with protobuf type. Note that `protobuf` and `bytes` types are only available, unless explicitly type cast. In this case, the content is base64-encoded into the bytes content. For example, `bytes(${.otel.log.span_id})`. When using template functions, use `--include-bytes`, for example, `$(format-json .otel.* --include-bytes`.
+`ArrayValue` and `KeyValueList` types are stored serialized with protobuf type. Note that `protobuf` and `bytes` types are only available, unless explicitly type cast. For example, `bytes(${.otel.log.span_id})`. When using template functions, use `--include-bytes`, for example, `$(format-json .otel.* --include-bytes`. In the case of `$(format-json)`, the content is base64-encoded into the bytes content.
