@@ -8,11 +8,11 @@ The following authentication methods are available in the `auth()` block:
 
 ### `adc()` {#adc}
 
-[Application Default Credentials (ADC)](https://cloud.google.com/docs/authentication/application-default-credentials). This authentication method is only available for destination. It accepts the `target-service-account()` option, where you can list service accounts to match against when authenticating the server.
+[Application Default Credentials (ADC)](https://cloud.google.com/docs/authentication/application-default-credentials). This authentication method is only available for destinations.
 
 ### `alts()` {#alts}
 
-[Application Layer Transport Security (ALTS)](https://grpc.io/docs/languages/cpp/alts/) is a simple to use authentication, only available within Google's infrastructure.
+[Application Layer Transport Security (ALTS)](https://grpc.io/docs/languages/cpp/alts/) is a simple to use authentication, only available within Google's infrastructure. It accepts the `target-service-account()` option, where you can list service accounts to match against when authenticating the server.
 
 ```shell
 source {
@@ -49,4 +49,7 @@ destination {
   };
 ```
 
-> Note: `tls(peer-verify())` is not available for the `opentelemetry()` destination.
+> Note:
+>
+> - `tls(peer-verify())` is not available for the `opentelemetry()` destination.
+> - The `opentelemetry()` drivers have a different `tls()` block implementation from the `network()` or `http()` drivers. Most features are the same.

@@ -16,6 +16,8 @@ The `opentelemetry()` parser parses the fields into name-value pairs starting wi
     - The actual data is mapped into `.otel.metric.data.<type>.<...>`, for example, `.otel.metric.data.gauge.data_points.0.time_unix_nano`.
 - The fields of traces are mapped into `.otel.span.<...>`, for example, `.otel.span.name`, `.otel.span.trace_state`. Repeated fields have an index, for example, `.otel.span.events.5.time_unix_nano`.
 
+For details on the parsed fields, you can check the [OpenTelemetry proto files](https://github.com/open-telemetry/opentelemetry-proto/tree/v0.20.0/opentelemetry/proto).
+
 ## Mapping data types
 
 String, bool, int64, double, and bytes values are mapped to their respective {{% param "product_name" %}} name-value type, for example, `.otel.resource.attributes.string_key` becomes a string value. <!-- FIXME add a link to the value-pairs docs -->
