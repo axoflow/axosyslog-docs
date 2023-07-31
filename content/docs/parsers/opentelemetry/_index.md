@@ -3,7 +3,7 @@ title: Parse OpenTelemetry messages
 linktitle: OpenTelemetry
 ---
 
-By default, {{% param "product_name" %}} doesn't parse the fields of incoming OpenTelemetry messages into name-value pairs, but are only available for forwarding using the `opentelemetry()` destination. To parse the fields into name-value pairs, use the `opentelemetry()`.
+By default, {{% param "product_name" %}} doesn't parse the fields of incoming OpenTelemetry messages into name-value pairs, but are only available for forwarding using the `opentelemetry()` destination. To parse the fields into name-value pairs, use the `opentelemetry()` parser.
 
 The `opentelemetry()` parser parses the fields into name-value pairs starting with the `.otel.` prefix.
 
