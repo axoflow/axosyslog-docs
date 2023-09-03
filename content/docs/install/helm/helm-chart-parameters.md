@@ -14,6 +14,32 @@ The following table lists the configurable parameters of the AxoSyslog collector
 |  config.version  | The version string specifies [the `syslog-ng` version the configuration corresponds to](https://axoflow.com/docs/axosyslog-core/chapter-configuration-file/configuration-syntax/). |  ""  |
 |  config.sources.kubernetes.enabled  | Collect pod logs using the [`kubernetes()`](https://axoflow.com/docs/axosyslog-core/chapter-sources/configuring-sources-kubernetes/) source. If disabled, the chart doesn't configure any source. For the list of available sources, see the [AxoSyslog Core Documentation](https://axoflow.com/docs/axosyslog-core/chapter-sources/) |  true  |
 
+The following example uses the `config.raw` parameter to configure a custom destination:
+
+```shell
+config:
+  raw: |
+    @version: 4.3
+    @include "scl.conf"
+
+    log {
+      source {
+        syslog(port(12345));
+      };
+
+      destination {
+        logscale(
+          token("your-secret-humio-ingest-token")
+        );
+      };
+
+      flags(flow-control);
+    };
+
+daemonset:
+  hostNetworking: true
+```
+
 ### Network destination
 
 Send logs over the network, conforming to RFC3164 using the `network()` destination.
