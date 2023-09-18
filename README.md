@@ -1,6 +1,6 @@
 # AxoSyslog documentation
 
-Documentation for the syslog-related projects of Axoflow, published at [https://axoflow.com/docs/axosyslog/](https://axoflow.com/docs/axosyslog/).
+Documentation for the syslog-related projects of Axoflow, published at [https://docs.axoflow.com/axosyslog/](https://docs.axoflow.com/axosyslog/).
 
 The documentation is built using [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/docs/).
 
