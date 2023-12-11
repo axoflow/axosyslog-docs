@@ -1,6 +1,7 @@
 ---
 title: Sending Kubernetes logs to OpenSearch
 weight: 100
+redirect: https://axoflow.com/docs/axosyslog-core/quickstart/opensearch-helm/
 ---
 
 The following tutorial shows you how to send Kubernetes logs to OpenSearch.

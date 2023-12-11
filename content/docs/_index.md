@@ -1,6 +1,7 @@
 ---
 title: AxoSyslog documentation
 weight: 100
+redirect: https://axoflow.com/docs/axosyslog-core/
 ---
 
 AxoSyslog is a cloud-native syslog-ng distribution, created by [Axoflow](https://axoflow.com). It also provides documentation for the syslog-related Axoflow projects, and also tips and tutorials about [syslog-ng](https://github.com/syslog-ng/syslog-ng).

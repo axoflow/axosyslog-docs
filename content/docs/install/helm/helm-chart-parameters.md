@@ -2,6 +2,7 @@
 title: Parameters of the AxoSyslog collector Helm chart
 linktitle: Chart parameters
 weight: 100
+redirect: https://axoflow.com/docs/axosyslog-core/install/helm/helm-chart-parameters/
 ---
 
 The following table lists the configurable parameters of the AxoSyslog collector chart and their default values. For details on installing the chart, see {{% xref "/docs/install/helm/_index.md" %}}.

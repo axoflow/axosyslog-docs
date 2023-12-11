@@ -2,6 +2,7 @@
 title: Install AxoSyslog with Helm
 linktitle: Helm
 weight: 300
+redirect: https://axoflow.com/docs/axosyslog-core/install/helm/
 ---
 
 AxoSyslog provides [Helm charts for `syslog-ng`](https://github.com/axoflow/axosyslog-charts/). You can use these charts to install [cloud-ready `syslog-ng` images]({{< relref "/docs/_index.md#images" >}}) created and maintained by [Axoflow](https://axoflow.com).
