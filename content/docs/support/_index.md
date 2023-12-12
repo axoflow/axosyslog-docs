@@ -1,6 +1,7 @@
 ---
 title: Support
 weight: 1000
+redirect: https://axoflow.com/docs/axosyslog-core/support/
 ---
 
 In case you need help with any of the AxoSyslog projects, or directly with `syslog-ng`, you have several ways to contact us:

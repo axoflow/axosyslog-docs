@@ -1,5 +1,6 @@
 ---
 title: AxoSyslog documentation
+redirect: https://axoflow.com/docs/axosyslog-core/
 ---
 
 {{< blocks/cover title="AxoSyslog: the cloud-native syslog-ng distribution by Axoflow" image_anchor="top" width="min" color="gray" >}}
