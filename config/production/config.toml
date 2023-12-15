@@ -1,4 +1,4 @@
-baseurl = "https://docs.axoflow.com/axosyslog/"
+baseurl = "https://axoflow.com/docs/axosyslog/"
 buildDrafts = false
 googleAnalytics = "G-3P6PW57YTF"
 
@@ -11,4 +11,4 @@ id = "G-3P6PW57YTF"
 
 [params]
 
-url_latest_version = "https://docs.axoflow.com/axosyslog/"
+url_latest_version = "https://axoflow.com/docs/axosyslog/"
