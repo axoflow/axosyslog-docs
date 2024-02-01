@@ -58,5 +58,5 @@ jobs:
           rclone_config: ${{ secrets.RCLONE_CONFIG }}
 
       - run: |
-          rclone copy --progress --stats-one-line public/ axodocs:/axosyslog
-          rclone copy public/docs-main/index.html axodocs:/
+          rclone copy --stats-log-level NOTICE --stats-one-line public/ axodocs:/axosyslog
+          rclone copyto --ignore-times public/docs-main/index.html axodocs:/index.html
